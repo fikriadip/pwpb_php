@@ -1,0 +1,372 @@
+<!-- Menghitung Luas dan Keliling lingkaran -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Menghitung Luas dan Keliling Lingkaran</title>
+</head>
+
+<body>
+    <h1 class="text-center mb-5">Hitung Keliling dan luas Lingkaran</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <form method="POST" action="" class="mb-5">
+                    <div class="mb-3">
+                        <label for="jarijari" class="form-label">Masukkan Jari-Jari</label>
+                        <input type="number" class="form-control" id="jarijari" name="jarijari">
+                    </div>
+                    <button type="submit" name="hitung" class="btn btn-primary">Hitung</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                </form>
+
+                <?php
+                    if (isset($_POST['hitung'])) {
+                        $jarijari = $_POST['jarijari'];
+                        $phi = 22/7;
+                        $luas = $phi * $jarijari * $jarijari;
+                        $keliling = $phi * ($jarijari + $jarijari);
+
+                        echo "Lingkarang dengan jari-jari $jarijari maka memiliki <br>";
+                        echo "Luas : $luas <br>";
+                        echo "Keliling : $keliling";
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
+
+<!-- Menghitung Luas dan Keliling persegi panjang -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Menghitung Luas dan Keliling persegi panjang</title>
+</head>
+
+<body>
+    <h1 class="text-center mb-5">Hitung Panjang dan Lebar Persegi Panjang</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <form method="POST" action="" class="mb-5">
+                    <div class="mb-3">
+                        <label for="panjang" class="form-label">Masukkan Panjang</label>
+                        <input type="number" class="form-control" id="panjang" name="long">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lebar" class="form-label">Masukkan Lebar</label>
+                        <input type="number" class="form-control" id="lebar" name="wide">
+                    </div>
+                    <button type="submit" name="hitung" class="btn btn-primary">Hitung</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                </form>
+
+                <?php
+                    if (isset($_POST['hitung'])) {
+                        $panjang = $_POST['long'];
+                        $lebar = $_POST['wide'];
+                        
+                        $keliling = ($panjang * 2) + ($lebar * 2); // menghitung keliling
+                        $luas = $panjang * $lebar; // menghitung luas
+
+                        echo "Persegi panjang yang memiliki lebar: $lebar, dan panjang : $panjang maka : <br>";
+                        echo "Keliling : $keliling <br>";
+                        echo "Luas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: $luas";
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
+
+<!-- Menghitung Luas dan Keliling Persegi -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Menghitung Luas dan Keliling Persegi</title>
+</head>
+
+<body>
+    <h1 class="text-center mb-5">Hitung Keliling dan luas Persegi</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <form method="POST" action="" class="mb-5">
+                    <div class="mb-3">
+                        <label for="sisi" class="form-label">Masukkan Sisi Persegi</label>
+                        <input type="number" class="form-control" id="sisi" name="sisi">
+                    </div>
+                    <button type="submit" name="hitung" class="btn btn-primary">Hitung</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                </form>
+
+                <?php
+                    if (isset($_POST['hitung'])) {
+                        $sisi = $_POST['sisi'];
+                        $keliling = $sisi * 4;
+                        $luas = $sisi * $sisi;
+
+                        echo "Persegi memliki sisi $sisi maka memiliki : <br>";
+                        echo "Luas : $luas <br>";
+                        echo "Keliling : $keliling";
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
+
+<!-- Menghitung Luas dan Keliling Segitiga -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Menghitung Luas dan Keliling Segitiga</title>
+</head>
+
+<body>
+    <h1 class="text-center mb-5">Hitung Keliling dan luas Segitiga</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <form method="POST" action="" class="mb-5">
+                    <div class="mb-3">
+                        <label for="alas" class="form-label">Masukkan Alas</label>
+                        <input type="number" class="form-control" id="alas" name="alas">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tiggi" class="form-label">Masukkan Tinggi</label>
+                        <input type="number" class="form-control" id="tinggi" name="tinggi">
+                    </div>
+                    <button type="submit" name="hitung" class="btn btn-primary">Hitung</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                </form>
+
+                <?php error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+                    if(isset($_POST['hitung'])){ 
+                        $a = $_POST['alas']; 
+                        $t = $_POST['tinggi']; 
+                        $luas = 1/2 * $a * $t; 
+                        $keliling = 2 * $t + $a; 
+                        $s = $_POST['s'];
+
+                        echo "Persegi panjang yang memiliki alas: $a, dan tinggi : $t maka : <br>";
+                        echo "Luas : $luas <br>";
+                        echo "Keliling : $keliling";
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
+
+<!-- Menghitung Luas dan Keliling Segitiga -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Menghitung Luas dan Keliling Segitiga</title>
+</head>
+
+<body>
+    <h1 class="text-center mb-5">Hitung Keliling dan luas Segitiga</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <form method="POST" action="" class="mb-5">
+                    <div class="mb-3">
+                        <label for="sisia" class="form-label">Masukkan sisi A</label>
+                        <input type="number" class="form-control" id="sisia" name="sisiA">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sisib" class="form-label">Masukkan sisi C</label>
+                        <input type="number" class="form-control" id="sisib" name="sisiC">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tiggi" class="form-label">Masukkan Tinggi</label>
+                        <input type="number" class="form-control" id="tinggi" name="tinggi">
+                    </div>
+                    <button type="submit" name="hitung" class="btn btn-primary">Hitung</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                </form>
+
+                <?php
+                    if (isset($_POST['hitung'])) {
+                        $valueA = $_POST['sisiA'];
+                        $valueB = $_POST['sisiC'];
+                        $valueC = $_POST['tinggi'];
+                        function add($valueA, $valueB, $valueC) {
+                        $luas = (($valueA + $valueB)*$valueC)/2;
+                        return $luas;
+                        }
+                        echo "<strong><U> Sisi A : $valueA, </u></strong><br><br>";
+                        echo "<strong><U> Sisi B : $valueB, </strong></u><br><br>";
+                        echo "<strong><U> Tinggi : $valueC, maka:</strong></u><br><br>";
+                        echo "Luas Trapesium : <br>";
+                        $luas = add($valueA, $valueB, $valueC);
+                        Printf("Luas : 1/2(%d + %d)* %d = %d<br>",$valueA, $valueB, $valueC, $luas);
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html><!-- Menghitung Luas dan Keliling Segitiga -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Menghitung Luas dan Keliling Segitiga</title>
+</head>
+
+<body>
+    <h1 class="text-center mb-5">Hitung Keliling dan luas Segitiga</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <form method="POST" action="" class="mb-5">
+                    <div class="mb-3">
+                        <label for="sisia" class="form-label">Masukkan sisi A</label>
+                        <input type="number" class="form-control" id="sisia" name="sisiA">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sisib" class="form-label">Masukkan sisi C</label>
+                        <input type="number" class="form-control" id="sisib" name="sisiC">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tiggi" class="form-label">Masukkan Tinggi</label>
+                        <input type="number" class="form-control" id="tinggi" name="tinggi">
+                    </div>
+                    <button type="submit" name="hitung" class="btn btn-primary">Hitung</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                </form>
+
+                <?php
+                    if (isset($_POST['hitung'])) {
+                        $valueA = $_POST['sisiA'];
+                        $valueB = $_POST['sisiC'];
+                        $valueC = $_POST['tinggi'];
+                        function add($valueA, $valueB, $valueC) {
+                        $luas = (($valueA + $valueB)*$valueC)/2;
+                        return $luas;
+                        }
+                        echo "<strong><U> Sisi A : $valueA, </u></strong><br><br>";
+                        echo "<strong><U> Sisi B : $valueB, </strong></u><br><br>";
+                        echo "<strong><U> Tinggi : $valueC, maka:</strong></u><br><br>";
+                        echo "Luas Trapesium : <br>";
+                        $luas = add($valueA, $valueB, $valueC);
+                        Printf("Luas : 1/2(%d + %d)* %d = %d<br>",$valueA, $valueB, $valueC, $luas);
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
